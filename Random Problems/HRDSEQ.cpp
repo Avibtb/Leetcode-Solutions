@@ -46,9 +46,9 @@ int gcd(int a, int b)
     return(gcd(b%a,a));
 }
 
-/* Given an array , find the majority element if exist.
-* Input - 7 2 7 3 7 2 7 7
-* Output - 7
+/* 
+* 
+* 
 */
 
 const int MAXN = 128 + 10;
