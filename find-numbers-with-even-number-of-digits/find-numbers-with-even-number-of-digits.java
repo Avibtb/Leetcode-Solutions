@@ -1,13 +1,22 @@
 class Solution {
     
-    public int findNumbers(int[] nums) {
-         int result = 0;
-        for(int i = 0 ; i < nums.length ; i++){
-            int count = (int)Math.log10(nums[i]) + 1; 
-            if(count % 2 == 0) result++;
+    public int count(int n){
+        int inc = 1;
+        while( (n/=10)!=0){
+            inc+=1;
         }
-        
-        return result;
+        return inc;
+    }
+    
+    public int findNumbers(int[] nums) {
+       int ans = 0;
+        for(int i:nums){
+            if(count(i) % 2 == 0){
+                ans+=1;
+            }
+            
+        }
+        return ans;
         
     }
 }
